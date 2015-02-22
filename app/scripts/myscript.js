@@ -13,34 +13,25 @@ $(function() {
         //var authenticity_token = $('meta[name=csrf-token]').attr('content');
         var title = $(data).find('.header:first');
         var contentData = $(data).find('tab_pane[title=Submission] .checkpoint-action-content');
-        $(contentData).prepend(self.attr('data-user'));
         $(contentData).prepend(title);
-
-        var button = contentData.find('.btn');
-        button.attr('type','button');
-        $(button).click(function () {
-          console.log('POSTED');
-          //$.post(button.parent('form').attr('action'), function () {
-          //  $('.modal').modal('hide');
-          //  $(element).parent('tr').hide();
-          //});
-
-        });
-
-        var content = contentData.html();
-
-
-        //contentData.find('.btn').attr('type','').click(function () {
-        //  $.post(button.parent('form').attr('action'));
-        //  $('.modal').modal('hide');
-        //  $(element).parent('tr').hide();
-
-        //});
+        $(contentData).prepend(self.attr('data-user'));
+        var content = $(contentData).html();
+        var submitButtonAction = $(contentData).find('form').attr('action');
+        var submitButtonText = $(contentData).find('form .btn').attr('value');
 
         $('.modal').modal('show');
         $('.modal-content').html(content);
+        $('.modal-content').find('form').replaceWith('<button class="btn btn-submit">'+submitButtonText+'</button>');
         $('.modal').on('hide.bs.modal', function () {
           $('.modal-content').html('');
+        });
+        $('.modal-content .btn-submit').click(function () {
+          $.post(submitButtonAction, {authenticity_token: $('meta[name=csrf-token]').attr('content')}, function () {
+            $('.modal').modal('hide');
+            //NOT WORKING FOR SOME REASON
+            $(element).parent('tr').hide();
+          });
+
         });
       });
 
