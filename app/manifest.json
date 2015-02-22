@@ -1,0 +1,23 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "bower_components/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.bloc.io/*"],
+      "css": ["bower_components/bootstrap/dist/css/bootstrap.min.css","bower_components/bootstrap/dist/css/bootstrap-theme.min.css","styles/mystyles.css"],
+      "js": ["bower_components/jquery/dist/jquery.min.js", "bower_components/bootstrap/dist/js/bootstrap.min.js", "scripts/myscript.js"]
+    }
+  ]
+}

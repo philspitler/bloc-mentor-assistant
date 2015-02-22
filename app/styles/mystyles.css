@@ -1,0 +1,39 @@
+/*table tr td:first-child i a {*/
+/*  font-size: 12px;*/
+/*  margin-top: 4px;*/
+/*  color: #FF931E !important;*/
+/*}*/
+table tr td .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0px;
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-radius: 4px;
+}
+
+table tr td .btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.modal-content {
+  padding: 20px;
+}
