@@ -17,15 +17,15 @@ $ npm install
 $ bower install
 ```
 
-### Test Chrome Extension
+### Developing the Chrome Extension
 
-To test, go to: chrome://extensions, enable Developer mode and load app as an unpacked extension.
+To work on the extension, go to: chrome://extensions, enable Developer mode and load the app folder as an unpacked extension.
 
 ### Grunt tasks
 
 #### Debug
 
-Debug task helps reduce your effors during development extensions. If the task detects your changes of source files, Livereload([chromereload.js](https://github.com/yeoman/generator-chrome-extension/blob/master/app/templates/scripts/chromereload.js)) reloads your extension. If you would like to know more about Livereload and preview of Yeoman? Please see [Getting started with Yeoman and generator-webapp](http://youtu.be/zBt2g9ekiug?t=3m51s) for your understanding.
+Debug task helps reduce your effors during development extensions. If the task detects your changes of source files, Livereload([chromereload.js](https://github.com/yeoman/generator-chrome-extension/blob/master/app/templates/scripts/chromereload.js)) reloads your extension.
 
 ```bash
 grunt debug
@@ -35,11 +35,14 @@ grunt debug
 
 By default, generators compress the file that was created by building a js/css/html/resource file. You can distribute the compressed file using the Chrome Developer Dashboard to publish to the Chrome Web Store.
 
-Run this command to build your Chrome Extension project.
+Run this command to build your Chrome Extension project to the "dist" directory.
 
 ```bash
 grunt build
 ```
+
+To use, go to: chrome://extensions, enable Developer mode and load the dist folder as an unpacked extension.
+
 ### Features
 
 ### Review Buttons on Notifications in Dashboard
