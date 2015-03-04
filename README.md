@@ -7,14 +7,12 @@
 ### Requirements
 
 - Node.js
-- Bower (installed globally) [will be changing this soon to use a local bower version with npm "postinstall"]
 
 ###Installation
 
 ```bash
 $ git clone https://github.com/philspitler/bloc-mentor-assistant.git
 $ npm install
-$ bower install #will be removed when changing to local bower and "postinstall"
 ```
 
 ### Developing the Chrome Extension
