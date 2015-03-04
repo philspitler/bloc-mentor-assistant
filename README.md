@@ -57,5 +57,3 @@ To use, go to: chrome://extensions, enable Developer mode and load the dist fold
 ### Known issues
 
 - the text of the submission doesn't show up currently, only the git diff
-
-- the row of the notification for the checkpoint that was marked complete, doesn't hide immediately, have to refresh
