@@ -54,6 +54,6 @@ To use, go to: chrome://extensions, enable Developer mode and load the dist fold
 #### When Click Completed, the modal clears and dissapears
 ![BMA3](http://ec2-52-0-200-188.compute-1.amazonaws.com/images/bma3.png)
 
-### Known issues
+### Issues
 
-- the text of the submission doesn't show up currently, only the git diff
+Please see https://github.com/philspitler/bloc-mentor-assistant/issues
